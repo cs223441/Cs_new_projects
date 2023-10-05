@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+box-sizing: border-box;
+min-width:50pc ;
+width: 100%;
+margin:0 0 0 0;
+background-color: whitesmoke;
+}
+.center{
+  margin-top: 10pc;
+}
+#form-dv{
+  justify-self: center;
+  padding: 5pc;
+  width: 100%;
+  text-align: center;
+  display: block;
+  box-shadow: #03001C 1pc;
+  box-sizing: border-box;
+
+}
+
+#form-inner{
+  padding: 3pc;
+  width:50%;
+  margin: auto;
+  height: 25%;
+  background-color:white;
+  transition: box-shadow .3s ease-out;  
+}
+#form-inner:hover{
+box-shadow:  10px 8px #888888;
+}
+#inputs{
+  width: 60%;
+  margin-left:20%;
+}
+
+#inputs input{
+  border-top:none; border-left: none; border-right: none;border-bottom: 1px black solid;
+  width: 100%;
+  margin:1pc ;
+}
+
+#inputs input:focus{
+  outline: 0;
+}
+#form-inner button{
+  display: inline-block;
+  color: white;
+  height: 3pc;
+  border:2px solid;
+  border-radius: 3px;
+  width: 70% ;
+  margin-left:20% ;
+  background-color:#352f44 ;
+  transition: background-color .8s ease-out;
+}
+
+#form-inner button:hover{
+    background-color:#151B1E;
+}     
+
+#form-inner:hover{
+  cursor: pointer;
+}
+
+</style>
+
+<script>
+  function getvals(){
+    let name=getElementById('#name');
+    let email=getElementById('#email');
+    let pass=getElementById('#pass');
+    let age=getElementById('#age');
+  alert('got'+name);
+  alert('got'+email);
+  alert('got'+pass);
+  alert('got'+age); 
+  }
+</script>
+
+<div class="center">
+  <form for="" id="form-inner" action="/action_page.php" class="clear-fix" style="border:1px solid #ccc">
+    <br>  
+    <h3>Signup</h3>
+      <hr style="color:#212121;">
+      <br>
+      <br>
+    
+    <div class="container-fluid" id="inputs">
+      <input id='name' type="text" placeholder="Name">
+      <br>    
+      <input id="email" type="email"  placeholder="Email xyz@gmail.com">
+      <br>  
+      <input id='pass' type="password" placeholder="Password recommended strong">
+      <br> 
+      <input type="number" placeholder="Age">
+      <br>    
+      <br>
+      <button id="cancelbtn" onclick="self.close(),console.log('signup_tab closed')" type="button" class="cancelbtn">Cancel</button>
+      <button onclick="getvals()" id="signup-btn" type="submit">Sign Up</button>
+    </div>
+  </div>
+</form>
+</div>
+</body>
+</html>
